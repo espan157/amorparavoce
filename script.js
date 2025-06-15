@@ -1,0 +1,1 @@
+console.log('Contador de namoro, frases, etc. estarão aqui.')
