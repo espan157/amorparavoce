@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💌 Para a minha Princesa</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffeef5;
+      font-family: 'Segoe UI', sans-serif;
+      color: #5a2a58;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      width: 100%;
+      padding: 40px 20px 10px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.3em;
+      margin: 0 0 10px;
+    }
+    .contador {
+      font-size: 1em;
+      font-weight: 500;
+      background: #fff8fb;
+      padding: 8px 16px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: inline-block;
+    }
+    main {
+      width: 100%;
+      max-width: 800px;
+      padding: 20px;
+    }
+    p {
+      font-size: 1.1em;
+      line-height: 1.8em;
+      background: #fff8fb;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .frase, .poema {
+      margin: 30px 0;
+      background: #ffffff;
+      padding: 15px 25px;
+      border-radius: 20px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      font-style: italic;
+    }
+    img {
+      width: 95%;
+      max-width: 450px;
+      margin: 20px 0;
+      border-radius: 24px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      display: block;
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>💌 Para a minha Princesa</h1>
+    <div class="contador" id="contador"></div>
+  </header>
+
+  <main>
+    <p>
+      Desde esse dia, essa data… mesmo sabendo que isso nem importa, minha vida ganhou um novo ritmo — o seu.<br><br>
+      Você, com esse jeito forte, linda, meio brava às vezes (mas só um pouquinho 😅), me encanta mais a cada dia. Ver você em quadra, dando o seu melhor, me enche de orgulho. Você é incrível, não só como atleta, mas como pessoa. Mesmo com as dificuldades, com tudo que acontece ao seu redor, você continua firme. E eu tô aqui — do seu lado, sempre.<br><br>
+      Eu sou o seu fã número 01. Seu parceiro. Seu apoio. Seu abrigo nos dias ruins e seu sorriso nos dias bons. Nosso relacionamento é real: tem altos e baixos, tem rotina, tem risadas do nada, e tem aqueles momentos que parecem ter sido escritos por alguma coisa maior. Momentos que guardo no coração como se fossem eternos.<br><br>
+      Mas antes disso tudo, teve a gente como amigos. Teve aquela fase mais bagunçada, cheia de altos e baixos, de erros e acertos. E por tudo isso, pelas falhas e pelas confusões, eu peço desculpas. Porque mesmo com os contras, também houve muitos prós. E no fim, tudo isso — o bom e o ruim — nos ensinou tanto…<br>
+      Ensinou a crescer. A compreender. A perdoar.<br>
+      E o mais importante: a nos amar de verdade.<br><br>
+      Passamos por tanta coisa juntos, e cada parte do caminho valeu a pena. Porque foi isso que fez a gente ser o que é hoje. E que sorte a minha poder dizer:<br>
+      Você é minha princesa 🤍<br>
+      E esse site é só mais uma forma de te lembrar:<br>
+      Você não tá sozinha. Você me tem. E eu te amo.
+    </p>
+
+    <div class="frase">"Te amar não é uma escolha. É a melhor parte de quem eu sou."</div>
+    <img src="foto1.jpg" alt="Foto nossa 1">
+    <div class="frase">"Teu corpo fala com o meu até quando o silêncio ocupa tudo." 🫦</div>
+    <img src="foto2.jpg" alt="Foto nossa 2">
+    <div class="frase">"Nossos sorrisos sabem exatamente onde se encaixar."</div>
+    <img src="foto3.jpg" alt="Foto nossa 3">
+    <img src="foto4.jpg" alt="Foto nossa 4">
+    <img src="foto5.jpg" alt="Foto nossa 5">
+    <img src="foto6.jpg" alt="Foto nossa 6">
+    <div class="poema">"Seu abraço é casa. Seu beijo é paz."</div>
+    <div class="poema">"É no seu olhar que meu mundo faz sentido."</div>
+  </main>
+
+  <audio autoplay loop>
+    <source src="superpowers.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <script>
+    const inicio = new Date("2024-02-03T19:35:00");
+    const contador = document.getElementById("contador");
+
+    function atualizarContador() {
+      const agora = new Date();
+      const diff = agora - inicio;
+
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diff / (1000 * 60)) % 60);
+      const segundos = Math.floor((diff / 1000) % 60);
+
+      contador.innerText = `Estamos juntos há ${dias}d ${horas}h ${minutos}min ${segundos}s 💖`;
+    }
+
+    setInterval(atualizarContador, 1000);
+    atualizarContador();
+  </script>
+</body>
+</html>
